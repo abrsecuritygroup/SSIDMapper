@@ -7,6 +7,8 @@
 
   You will also need API keys from Wigle, which can easily be obtained free of charge by visiting their website. Wigle throttles the use of their API and increases the amount of requests per day. The longer you have an account, the more API calls you will be able to make.
 
+  When downloading Kismet onto your device, be sure to follow the instructions for your chosen flavor of Linux at https://www.kismetwireless.net/packages/. 
+
 ```console
 pi@pi:~ $ git clone https://github.com/abrsecuritygroup/SSIDMapper && cd SSIDMapper
 pi@pi:~ $ chmod +x SSIDmapper.py
@@ -16,6 +18,7 @@ Attach your Alfa Card and let the script do the rest.
 pi@pi:~ $ sudo ./SSIDmapper.py
 ```
 When the script is done running, open a webpage at http://localhost:8000. A chart like the one below will be displayed on the webpage.
+
 ![image](https://github.com/user-attachments/assets/531143ad-338b-4619-ad95-62fef34ccbe1)
 
 
