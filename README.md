@@ -16,6 +16,7 @@ Attach your Alfa Card and let the script do the rest.
 pi@pi:~ $ sudo ./SSIDmapper.py
 ```
 When the script is done running, open a webpage at http://localhost:8000. A chart like the one below will be displayed on the webpage.
-![cropped](https://github.com/user-attachments/assets/0d324a1f-fb05-4965-980b-9ec7b13dd1b8)
+![image](https://github.com/user-attachments/assets/531143ad-338b-4619-ad95-62fef34ccbe1)
+
 
 
