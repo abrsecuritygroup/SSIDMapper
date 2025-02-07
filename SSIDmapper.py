@@ -92,7 +92,7 @@ def get_location(probed_ssids):
 
     addresses = {}
 
-    #Set url variables
+    #Set url variables. Change the API key information to match your API credentials.
     url = "https://api.wigle.net/api/v2/network/search"
     username = 	"YOUR API USERNAME"
     password = "YOUR API PASSWORD"
