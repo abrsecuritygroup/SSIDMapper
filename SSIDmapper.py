@@ -157,7 +157,7 @@ class MyHandler(http.server.SimpleHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(json.dumps(data_cache, ensure_ascii=False).encode("utf-8"))
 
-        elif self.path == '/logo.jpg':
+        elif self.path == '/logo.png':
             name = self.path[1:]
             nameFile = open(name, 'rb').read()
             mimetype = MimeTypes().guess_type(name)[0]
