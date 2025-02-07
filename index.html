@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Wi-Fi Probes</title>
+        <style>
+	   body {
+		   display: flex;
+		   justify-content: center;
+		   align-items: center;
+		   height: 100vh;
+		   margin: 0;
+	   }
+	   
+	   .logo-container {
+		   position: absolute;
+		   top: 20px;
+		   left: 20px;
+	   }
+
+	   .logo {
+		   width: 200px;
+		   height: auto;
+		   display: block;
+	   }
+
+	   table { border-collapse: collapse;
+		   width: 100%;
+	   }
+	   th, td {
+		   border: 1px solid black;
+		   padding: 20px;
+		   font-size: 1.5em;
+		   text-align: center;
+	   }
+	   th {
+		   background-color: #f2f2f2;
+	   }
+	</style>
+</head>
+<body>
+	<div class="logo-container">
+		<img src="logo.jpg" alt="ABR LOGO" class="logo">
+	</div>
+
+	<div id="table-container"></div>
+
+	<script>
+		async function loadTableData() {
+		    const response = await fetch('/data');
+		    const data = await response.json();
+		    let table = '<table><tr><th>SSID</th><th>Address</th></tr>';
+		    for (const [ssid, address] of Object.entries(data)) {
+			const cleanedAddress = address.replace(/\s+/g, ' ').trim();		    
+			table += `<tr><td>${ssid}</td><td>${address}</td></tr>`;
+			}
+		    table += '</table>';
+		    document.getElementById('table-container').innerHTML = table;
+				}
+
+		window.onload = loadTableData;
+	</script>
+</body>
+</html>
+
+
